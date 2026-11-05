@@ -7,18 +7,24 @@ return sum;
 }
 
 function findHighestLowest(numbers) {
-  
+  if (numbers.length === 0) {
+    return { highest: null, lowest: null };
+  }
+  let highest = numbers[0];
+  let lowest = numbers[0];
+  for (const number of numbers) {
+    if (number > highest) highest = number;
+    if (number < lowest) lowest = number;
+  }
+  return { highest, lowest };
 }
 
 function calculateAverage(numbers) {
-  
+  if (numbers.length === 0) {
+    return null;
+  }
+  return calculateSum(numbers) / numbers.length;
 }
-console.log(calculateSum([1, 2, 3]));      // 6
-console.log(calculateSum([10, -5, 2]));    // 7
-console.log(calculateSum([]));             // 0
-console.log(calculateSum([4.5, 1.5]));     // 6
-
-
 
 module.exports = {
   calculateSum,
