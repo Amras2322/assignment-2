@@ -11,3 +11,9 @@ function countLines(text) {
   if (!text) return 0;
   return text.replace(/\n$/, "").split(/\n/).length;
 }
+
+module.exports = {
+  countWords,
+  findLongestWord,
+  countLines,
+};
