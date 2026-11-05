@@ -33,6 +33,7 @@ Thumbs.db
 .idea/
 *.sublime-project
 *.sublime-workspace
+*.md
 
 # Optional: build artifacts
 dist/
